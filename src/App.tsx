@@ -15,7 +15,19 @@ const initial = [
 ]
 
 function App() {
-  const [board, setBoard] = useState(initial)
+  const [board, setBoard] = useState(getDeepCopy(initial))
+
+  function getDeepCopy(arr: number[][]) {
+    return JSON.parse(JSON.stringify(arr))
+  }
+
+  function onInputChange(e: React.ChangeEvent<HTMLInputElement>, row: number, col: number) {
+    var value = parseInt(e.target.value) || -1
+    var grid = getDeepCopy(board)
+    if (value === -1 || value >= 1 || value <= 9) grid[row][col] = value
+    setBoard(grid)
+  }
+
   return (
     <div className='App'>
       <header className='App-header'>
@@ -23,10 +35,18 @@ function App() {
         <table>
           <tbody>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((row, rindex) => (
-              <tr key={rindex}>
-                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((row, cindex) => (
-                  <td key={rindex + cindex}>
-                    <input value={board[rindex][cindex]} className='cell-input' />
+              <tr key={rindex} className={(row + 1) % 3 === 0 ? 'bold-border-bottom' : ''}>
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((col, cindex) => (
+                  <td
+                    key={rindex + cindex}
+                    className={(col + 1) % 3 === 0 ? 'bold-border-right' : ''}
+                  >
+                    <input
+                      onChange={(e) => onInputChange(e, rindex, cindex)}
+                      value={board[row][col] === -1 ? '' : board[rindex][cindex]}
+                      className='cell-input'
+                      disabled={initial[row][col] !== -1}
+                    />
                   </td>
                 ))}
               </tr>

@@ -57,3 +57,11 @@ table{
 td{
   padding: 0;
 }
+
+.bold-border-right{
+  border-right: 2px solid #684055;
+}
+
+.bold-border-bottom{
+  border-bottom: 2px solid #684055;
+}
