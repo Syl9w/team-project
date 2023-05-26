@@ -1,43 +1,18 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body{
   background-color: #DBB7B7;
-  ;
-  min-height: 100vh;
+}
+.header {
+  background-color: #DBB7B7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #663F54;
 }
 
 .App-link {
   color: #61dafb;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 .cell-input{
   width: 50px;
@@ -45,13 +20,14 @@
   font-size: 30px;
   text-align: center;
   border: 1px black solid;
-  background-color: #DBB7B7;
-  ;
+  background-color: #FFBFC0;
 }
 
 table{
   border-collapse: collapse;
   border: 5px #663F54 solid;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 td{
@@ -64,4 +40,20 @@ td{
 
 .bold-border-bottom{
   border-bottom: 2px solid #684055;
+}
+
+.ui.button{
+  width: 88px !important;
+  height: 88px !important;
+  padding: 0 !important;
+  font-size: 70px !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 11px !important;
+  background-color: #FFBFC0;
+}
+
+.ui.grid>.row {
+  padding: 0 !important;
 }
