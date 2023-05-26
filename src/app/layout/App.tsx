@@ -1,20 +1,13 @@
 
-import { Grid, Header } from 'semantic-ui-react'
-import Board from '../../features/board/board'
-import Numpad from '../../features/numpad/numpad'
+import { Header } from 'semantic-ui-react'
+import Game from '../../features/game/game'
+import { Outlet } from 'react-router'
 
 function App() {
   return (
     <>
       <Header as='h2' content='Sudoku Game by Duman & Assel & Sultan ' />
-      <Grid>
-        <Grid.Column width={8}>
-          <Board/>
-        </Grid.Column>
-        <Grid.Column width={3}>
-          <Numpad/>
-        </Grid.Column>
-      </Grid>
+     <Outlet/>
     </>
   )
 }
