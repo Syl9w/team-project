@@ -1,4 +1,4 @@
-import './index.css'
+
 import { Grid, Header } from 'semantic-ui-react'
 import Board from '../../features/board/board'
 import Numpad from '../../features/numpad/numpad'
