@@ -1,48 +1,48 @@
-body{
-  background-color: #DBB7B7;
+body {
+  background-color: #dbb7b7;
 }
 .header {
-  background-color: #DBB7B7;
+  background-color: #dbb7b7;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #663F54;
+  color: #663f54;
 }
 
 .App-link {
   color: #61dafb;
 }
 
-.cell-input{
+.cell-input {
   width: 50px;
   height: 50px;
   font-size: 30px;
   text-align: center;
   border: 1px black solid;
-  background-color: #FFBFC0;
+  background-color: #ffbfc0;
 }
 
-table{
+table {
   border-collapse: collapse;
-  border: 5px #663F54 solid;
+  border: 5px #663f54 solid;
   margin-left: auto;
   margin-right: auto;
 }
 
-td{
+td {
   padding: 0;
 }
 
-.bold-border-right{
+.bold-border-right {
   border-right: 2px solid #684055;
 }
 
-.bold-border-bottom{
+.bold-border-bottom {
   border-bottom: 2px solid #684055;
 }
 
-.ui.button{
+.ui.button {
   width: 88px !important;
   height: 88px !important;
   padding: 0 !important;
@@ -51,9 +51,28 @@ td{
   align-items: center;
   justify-content: center;
   margin-bottom: 11px !important;
-  background-color: #FFBFC0;
+  background-color: #ffbfc0;
 }
 
-.ui.grid>.row {
+.ui.grid > .row {
   padding: 0 !important;
+}
+
+.text-header {
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 70px !important;
+  line-height: 85px !important;
+  color: rgba(102, 63, 84, 0.99);
+}
+
+p {
+  position: absolute;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(102, 63, 84, 0.99);
 }
