@@ -20,11 +20,14 @@ export default observer(function Board() {
         {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((row, rindex) => (
           <tr key={rindex} className={(row + 1) % 3 === 0 ? 'bold-border-bottom' : ''}>
             {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((col, cindex) => (
-              <td key={rindex*9 + cindex} className={(col + 1) % 3 === 0 ? 'bold-border-right' : ''}>
+              <td
+                key={rindex * 9 + cindex}
+                className={(col + 1) % 3 === 0 ? 'bold-border-right' : ''}
+              >
                 <input
                   onClick={() => handleCellClick(rindex, cindex)}
                   value={gameStore.board[rindex][cindex]}
-                  className='cell-input'
+                  className={`cell-input ${gameStore.getClassName(rindex, cindex)}`}
                   onChange={handleValueUpdate}
                 />
               </td>
