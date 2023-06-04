@@ -68,11 +68,20 @@ td {
 }
 
 p {
-  position: absolute;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
   color: rgba(102, 63, 84, 0.99);
+}
+
+.rule-bg{
+  background-color: #ffbfc0 !important;
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 24px !important;
+  line-height: 29px !important;
+  color: rgba(102, 63, 84, 0.99) !important;
 }
