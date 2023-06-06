@@ -15,12 +15,21 @@ body {
 }
 
 .cell-input {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 85px;
   width: 50px;
   height: 50px;
   font-size: 30px;
   text-align: center;
   border: 1px black solid;
   background-color: #ffbfc0;
+}
+
+.mistake {
+  color: #ff8080;
 }
 
 table {
@@ -76,7 +85,7 @@ p {
   color: rgba(102, 63, 84, 0.99);
 }
 
-.rule-bg{
+.rule-bg {
   background-color: #ffbfc0 !important;
   font-family: 'Inter' !important;
   font-style: normal !important;

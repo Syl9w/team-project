@@ -1,6 +1,5 @@
 
 import { Header } from 'semantic-ui-react'
-import Game from '../../features/game/game'
 import { Outlet } from 'react-router'
 
 function App() {
