@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { makeAutoObservable } from 'mobx'
 
 export default class GameStore {
@@ -10,6 +11,19 @@ export default class GameStore {
     makeAutoObservable(this)
   }
 
+  fillBoard = async () => {
+    var board = await (await axios.get('http://localhost:5000/api/board')).data
+    for (let i = 0; i < board.length; i++) {
+      for (let j = 0; j < board.length; j++) {
+        if(board[j][i]!==0){
+          this.selectCell(j,i)
+          this.fillCell(board[j][i])
+        }
+      }
+      
+    }
+  }
+
   selectCell = (x: number, y: number) => {
     this.selectedCellX = x
     this.selectedCellY = y
@@ -17,6 +31,7 @@ export default class GameStore {
   }
 
   fillCell = (n: string) => {
+    
     if (
       (this.selectedCellX >= 0 || this.selectedCellX < 9) &&
       (this.selectedCellY >= 0 || this.selectedCellY < 9)
